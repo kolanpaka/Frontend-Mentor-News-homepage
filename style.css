@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 60%;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+}
+header{
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+.menu_bar{
+    display: none;
+}
+a{
+    text-decoration: none;
+    color:hsl(240, 100%, 5%);
+}
+p{
+    color: hsl(236, 13%, 42%);
+    font-size: 15px;
+    font-weight: 600;
+}
+hr{
+    border-style: none;
+    height: 1px;
+    background-color: hsla(36, 100%, 99%, 0.73);
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+a:hover{
+    color:hsl(5, 85%, 63%);
+    
+}
+header nav ul li a{
+    color:hsl(236, 13%, 42%);
+    font-weight: 600;
+}
+h2{
+    margin: 7px 0;
+    font-size: 17px;
+}
+h1{
+    margin: 5px 0;
+    font-size: 22px;
+    
+}
+.grid_layout{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap: 20px;
+    grid-template-areas: "image image aside"
+                         "main_header read_more aside"
+                         "card1 card2 card3";
+    
+}
+.grid_layout .main_image{
+    grid-area:image;
+    /* grid-column: span 2; */
+    width: 100%;
+}
+aside{
+    /* grid-row: span 2; */
+    grid-area: aside;
+    padding: 15px;
+    background-color:hsl(240, 100%, 5%);
+    color: white;
+}
+.aside_section>h1{
+    color:hsl(35, 77%, 62%);
+
+}
+aside .aside_section article{
+    margin: 10px 0;
+}
+.aside_section article h2{
+    color: hsl(36, 100%, 99%);
+}
+
+.h1_discription{
+    grid-area:main_header;
+    font-size:2.7rem;
+    font-weight:900;
+    justify-self: center;
+    color:hsl(240, 100%, 5%);
+}
+.read_more{
+    grid-area: read_more;
+}
+.read_more a{
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 13px;
+    background-color: hsl(5, 85%, 63%);
+    color: white;
+    font-weight: bolder;    
+}
+
+.read_more a:hover{
+    background-color:hsl(240, 100%, 5%); 
+}
+.content_to_read{
+    display: flex;
+    gap: 8px;
+}
+.paragraph_of_content .nunbering{
+    font-size: 1.5em;
+    font-weight:bolder;
+    color: hsl(233, 8%, 79%);
+}
+.paragraph_of_content h3,.paragraph_of_content p{
+    font-size: medium;
+}
+.paragraph_of_content h3{
+    margin: 7px 0;
+    /* font-weight: bolder; */
+    color:hsl(240, 100%, 5%); 
+}
+
+.content_to_read img{
+    width: 30%;
+}
+
+@media screen and (max-width: 430px)
+{
+    body{
+        width: 100%;
+    }
+    nav{
+        display: none;
+    }
+    .menu_bar{
+        display: unset;
+        margin: 0 14px;
+    }
+    
+
+    .grid_layout{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+                            "image"
+                             "main_header"
+                             " read_more"
+                             "aside"
+                             ;
+    }
+}
+
+@media screen and (max-width:850px){
+    body{
+        width: 85%;
+    }
+}
+
